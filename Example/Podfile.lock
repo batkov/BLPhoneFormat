@@ -1,0 +1,14 @@
+PODS:
+  - BLPhoneFormat (0.1.0)
+
+DEPENDENCIES:
+  - BLPhoneFormat (from `../`)
+
+EXTERNAL SOURCES:
+  BLPhoneFormat:
+    :path: ../
+
+SPEC CHECKSUMS:
+  BLPhoneFormat: a29b14153fcb524495f2ec261b080c769882de76
+
+COCOAPODS: 0.34.1
