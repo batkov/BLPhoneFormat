@@ -1,5 +1,5 @@
 //
-// TACountriesUtils.h
+// BLCountriesUtils.h
 // Copyright (c) 2015, Hariton Batkov
 // All rights reserved.
 //
@@ -25,15 +25,15 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #import <Foundation/Foundation.h>
-@class TACountry;
+@class BLCountry;
 
-@interface TACountriesUtils : NSObject
+@interface BLCountriesUtils : NSObject
 + (NSArray *)countryCodes;
-+ (TACountry *)countryByCode:(int)code;
-+ (TACountry *)countryByCountryId:(NSString *)countryId;
++ (BLCountry *)countryByCode:(int)code;
++ (BLCountry *)countryByCountryId:(NSString *)countryId;
 @end
 
-@interface TACountry : NSObject
+@interface BLCountry : NSObject
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSString * ID;
 @property (nonatomic, assign) NSInteger code;

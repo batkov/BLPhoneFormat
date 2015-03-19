@@ -1,24 +1,19 @@
-//
-//  TAPhoneFormattingManager.m
-//  Pods
-//
-//  Created by Hariton Batkov on 3/18/15.
-//
-//
+// BLPhoneFormattingManager.m
+// Copyright (c) 2015, Hariton Batkov
 
-#import "TAPhoneFormattingManager.h"
+#import "BLPhoneFormattingManager.h"
 
 #import "RMPhoneFormat.h"
 
 
-@interface TAPhoneFormattingManager ()
+@interface BLPhoneFormattingManager ()
 @property (nonatomic, strong, readwrite) NSString * formattedPhone;
 @end
 
-@implementation TAPhoneFormattingManager
+@implementation BLPhoneFormattingManager
 
-+ (instancetype) phoneFormattingManager:(id <TAPhoneFormattingDelegate>) delegate {
-    TAPhoneFormattingManager * manager = [self new];
++ (instancetype) phoneFormattingManager:(id <BLPhoneFormattingDelegate>) delegate {
+    BLPhoneFormattingManager * manager = [self new];
     manager.delegate = delegate;
     return manager;
 }
@@ -51,7 +46,7 @@ shouldChangeCharactersInRange:(NSRange)range
         for (int i = 0; i < (int)newText.length - 1; i++)
         {
             int countryCode = [[newText substringWithRange:NSMakeRange(1, newText.length - 1 - i)] intValue];
-            TACountry *country = [TACountriesUtils countryByCode:countryCode];
+            BLCountry *country = [BLCountriesUtils countryByCode:countryCode];
             if (country != nil)
             {
                 NSString * newPhone = [[NSString alloc] initWithFormat:@"%@%@", [newText substringFromIndex:newText.length - i], [self phoneNumber]];
@@ -297,7 +292,7 @@ shouldChangeCharactersInRange:(NSRange)range
 - (void)updateCountry
 {
     int countryCode = [[[self countryCode] substringFromIndex:1] intValue];
-    [self setCountry:[TACountriesUtils countryByCode:countryCode]];
+    [self setCountry:[BLCountriesUtils countryByCode:countryCode]];
 }
 
 - (NSString *) countryCode {
@@ -316,7 +311,7 @@ shouldChangeCharactersInRange:(NSRange)range
     [self.delegate phoneFormattingManager:self setCountryCode:countryCode];
 }
 
-- (void) setCountry:(TACountry *)country {
+- (void) setCountry:(BLCountry *)country {
     if (![self.delegate respondsToSelector:@selector(phoneFormattingManager:countryDetected:)])
         return;
     [self.delegate phoneFormattingManager:self countryDetected:country];

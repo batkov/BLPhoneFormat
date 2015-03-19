@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
-    'BLPhoneFormat' => ['Pod/Assets/*']
+    'BLPhoneFormat' => ['Pod/Assets/**/*']
   }
 
 end

@@ -1,19 +1,17 @@
 //
-// TACountriesUtils.m
+// BLCountriesUtils.m
 // Copyright (c) 2015, Hariton Batkov
-// All rights reserved.
-//
 
-#import "TACountriesUtils.h"
+#import "BLCountriesUtils.h"
 
-@implementation TACountriesUtils
+@implementation BLCountriesUtils
 
 + (NSArray *)countryCodes {
     static NSArray *list = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^
                   {
-                      NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Telegram-iOS-SDK.bundle/PhoneCountries" ofType:@"txt"];
+                      NSString *filePath = [[NSBundle mainBundle] pathForResource:@"BLPhoneFormat.bundle/PhoneCountries" ofType:@"txt"];
                       NSData *stringData = [NSData dataWithContentsOfFile:filePath];
                       NSString *data = nil;
                       if (stringData != nil)
@@ -50,7 +48,7 @@
                           if ([countryName hasSuffix:@"\r"])
                               countryName = [countryName substringToIndex:countryName.length - 1];
                           
-                          [array addObject:[TACountry countryWithName:countryName ID:countryId code:countryCode]];
+                          [array addObject:[BLCountry countryWithName:countryName ID:countryId code:countryCode]];
                           
                           currentLocation = nameRange.location + nameRange.length;
                           if (nameRange.length > 1)
@@ -62,8 +60,8 @@
     return list;
 }
 
-+ (TACountry *)countryByCode:(int)code {
-    for (TACountry *country in [self countryCodes]) {
++ (BLCountry *)countryByCode:(int)code {
+    for (BLCountry *country in [self countryCodes]) {
         if (country.code == code)
             return country;
     }
@@ -71,9 +69,9 @@
     return nil;
 }
 
-+ (TACountry *)countryByCountryId:(NSString *)countryId {
++ (BLCountry *)countryByCountryId:(NSString *)countryId {
     NSString *normalizedCountryId = [countryId lowercaseString];
-    for (TACountry *country in [self countryCodes]) {
+    for (BLCountry *country in [self countryCodes]) {
         if ([country.ID isEqualToString:normalizedCountryId]) {
             return country;
         }
@@ -83,14 +81,14 @@
 
 @end
 
-@interface TACountry ()
+@interface BLCountry ()
 + (instancetype) countryWithName:(NSString *)name ID:(NSString *)ID code:(NSInteger)code;
 @end
 
-@implementation TACountry
+@implementation BLCountry
 
 + (instancetype) countryWithName:(NSString *)name ID:(NSString *)ID code:(NSInteger)code {
-    TACountry * country = [[self alloc] init];
+    BLCountry * country = [[self alloc] init];
     country.name = name;
     country.ID = ID;
     country.code = code;

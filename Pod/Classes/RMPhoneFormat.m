@@ -340,7 +340,7 @@ static NSMutableDictionary *flagRules = nil;
 
 - (id)initWithDefaultCountry:(NSString *)countryCode {
     if ((self = [super init])) {
-        _data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Telegram-iOS-SDK.bundle/PhoneFormats" ofType:@"dat"]];
+        _data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"BLPhoneFormat.bundle/PhoneFormats" ofType:@"dat"]];
         NSAssert(_data, @"The file PhoneFormats.dat is not in the resource bundle. See the README.");
 
         if (countryCode.length) {
