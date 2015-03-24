@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLPhoneFormat"
-  s.version          = "0.2.0"
+  s.version          = "0.3.0"
   s.summary          = "Simple iOS Phone Number formatter Pod."
   s.description      = <<-DESC
                        Inspired by RMPhoneFormat and Telegram App phone formatting behavior.
