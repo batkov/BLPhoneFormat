@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.author           = { "Hariton Batkov" => "batkov@i.ua" }
   s.source           = { :git => "https://github.com/batkov/BLPhoneFormat.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/batkov111'
-  s.screenshots     = "https://github.com/batkov/BLPhoneFormat/blob/master/Screenshots/BLPhoneFormat.png"
+  s.screenshots     = "https://raw.githubusercontent.com/batkov/BLPhoneFormat/master/Screenshots/BLPhoneFormat.png"
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
