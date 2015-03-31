@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLPhoneFormat"
-  s.version          = "0.3.2"
+  s.version          = "0.3.3"
   s.summary          = "Simple iOS Phone Number formatter Pod."
   s.description      = <<-DESC
                        Inspired by RMPhoneFormat and Telegram App phone formatting behavior.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.author           = { "Hariton Batkov" => "batkov@i.ua" }
   s.source           = { :git => "https://github.com/batkov/BLPhoneFormat.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/batkov111'
-  s.screenshots     = "https://github.com/batkov/BLPhoneFormat/blob/master/Screenshots/BLPhoneFormat.gif"
+  s.screenshots     = "https://github.com/batkov/BLPhoneFormat/blob/master/Screenshots/BLPhoneFormat.png"
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
