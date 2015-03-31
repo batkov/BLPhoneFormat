@@ -9,23 +9,19 @@
 
 Pod::Spec.new do |s|
   s.name             = "BLPhoneFormat"
-  s.version          = "0.3.1"
+  s.version          = "0.3.2"
   s.summary          = "Simple iOS Phone Number formatter Pod."
   s.description      = <<-DESC
                        Inspired by RMPhoneFormat and Telegram App phone formatting behavior.
                        Only few methods to detect which country code is entered and format phone number.
                        Also list of Countries with phone codes included.
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "https://github.com/batkov/BLPhoneFormat"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Hariton Batkov" => "batkov@i.ua" }
   s.source           = { :git => "https://github.com/batkov/BLPhoneFormat.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/batkov111'
-
+  s.screenshots     = "https://github.com/batkov/BLPhoneFormat/master/Screenshots/BLPhoneFormat.gif"
   s.platform     = :ios, '6.0'
   s.requires_arc = true
 
