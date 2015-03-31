@@ -1,7 +1,7 @@
 # BLPhoneFormat
 Simple iOS Phone formatter Pod.
 
-![alt tag](https://github.com/batkov/BLPhoneFormat/master/Screenshots/BLPhoneFormat.gif)
+![alt tag](https://github.com/batkov/BLPhoneFormat/blob/master/Screenshots/BLPhoneFormat.gif)
 
 ## Installation
 
